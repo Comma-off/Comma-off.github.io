@@ -1,0 +1,38 @@
+[
+  {
+    "name": "CircleOS",
+    "url": "https://github.com/Comma-off/CircleOS",
+    "language": null,
+    "descriptionKey": "repo.circleos.desc"
+  },
+  {
+    "name": "MarOS-Simulator",
+    "url": "https://github.com/Comma-off/MarOS-Simulator",
+    "language": "Python",
+    "descriptionKey": "repo.maros.desc"
+  },
+  {
+    "name": "Browsers-tree",
+    "url": "https://github.com/Comma-off/Browsers-tree",
+    "language": "HTML",
+    "descriptionKey": "repo.browserstree.desc"
+  },
+  {
+    "name": "ArchBrew",
+    "url": "https://github.com/Comma-off/ArchBrew",
+    "language": "Rust",
+    "descriptionKey": "repo.archbrew.desc"
+  },
+  {
+    "name": "Not-Enough-Tooltips",
+    "url": "https://github.com/Comma-off/Not-Enough-Tooltips",
+    "language": "Java",
+    "descriptionKey": "repo.tooltips.desc"
+  },
+  {
+    "name": "JSBian",
+    "url": "https://github.com/Comma-off/JSBian",
+    "language": "JavaScript",
+    "descriptionKey": "repo.jsbian.desc"
+  }
+]
