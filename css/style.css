@@ -203,6 +203,13 @@ a {
   color: var(--md-on-secondary-container);
 }
 
+.top-nav a.active,
+.top-nav a.active:hover,
+.top-nav a.active:focus-visible {
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+}
+
 .top-bar__controls {
   display: flex;
   align-items: center;

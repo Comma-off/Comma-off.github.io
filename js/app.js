@@ -365,10 +365,48 @@
     });
   }
 
+  function initScrollSpy() {
+    const navLinks = Array.from(document.querySelectorAll(".top-nav a"));
+    const tracked = navLinks
+      .map((link) => ({ link, section: document.getElementById(link.getAttribute("href").slice(1)) }))
+      .filter((entry) => entry.section);
+
+    if (!tracked.length) return;
+
+    const topBar = document.querySelector(".top-bar");
+    let ticking = false;
+
+    function updateActive() {
+      ticking = false;
+      const offset = (topBar ? topBar.offsetHeight : 0) + 24;
+
+      let current = null;
+      for (const entry of tracked) {
+        if (entry.section.getBoundingClientRect().top - offset <= 0) {
+          current = entry;
+        }
+      }
+
+      navLinks.forEach((l) => l.classList.remove("active"));
+      if (current) current.link.classList.add("active");
+    }
+
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(updateActive);
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    updateActive();
+  }
+
   async function init() {
     initTheme();
     initLangSwitcher();
     initDiscordCopy();
+    initScrollSpy();
     await i18n.setLanguage(i18n.detectInitial());
     await initProjects();
     await initGithubStats();
