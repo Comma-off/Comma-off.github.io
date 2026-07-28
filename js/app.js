@@ -243,11 +243,21 @@
 
       const track = document.createElement("div");
       track.className = "lang-bar-track";
+
       const fill = document.createElement("div");
       fill.className = "lang-bar-fill";
-      fill.style.width = pct + "%";
+      fill.style.flexBasis = pct + "%";
       fill.style.backgroundColor = languageColor(language);
+
+      const remainder = document.createElement("div");
+      remainder.className = "lang-bar-remainder";
+
+      const stop = document.createElement("div");
+      stop.className = "lang-bar-stop";
+
       track.appendChild(fill);
+      track.appendChild(remainder);
+      track.appendChild(stop);
 
       const pctLabel = document.createElement("span");
       pctLabel.textContent = pct + "%";
@@ -334,9 +344,31 @@
     });
   }
 
+  function initDiscordCopy() {
+    const btn = document.getElementById("discord-contact");
+    if (!btn) return;
+    const handleEl = btn.querySelector("[data-handle-text]");
+    const originalHandle = btn.dataset.handle;
+    let resetTimer = null;
+
+    btn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(originalHandle);
+      } catch (e) {
+        /* clipboard unavailable — the handle is still visible to copy by hand */
+      }
+      handleEl.textContent = i18n.t("contact.discord.copied");
+      clearTimeout(resetTimer);
+      resetTimer = setTimeout(() => {
+        handleEl.textContent = originalHandle;
+      }, 1800);
+    });
+  }
+
   async function init() {
     initTheme();
     initLangSwitcher();
+    initDiscordCopy();
     await i18n.setLanguage(i18n.detectInitial());
     await initProjects();
     await initGithubStats();

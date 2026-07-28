@@ -6,6 +6,7 @@
   "nav.about": "About",
   "nav.projects": "Projects",
   "nav.activity": "GitHub Activity",
+  "nav.contact": "Contact",
   "theme.toggle": "Toggle light / dark theme",
   "lang.label": "Language",
 
@@ -24,6 +25,8 @@
   "about.fact.name.value": "Hidden — call me Comma",
   "about.fact.handle.label": "GitHub",
   "about.fact.handle.value": "@Comma-off",
+  "about.fact.os.label": "Daily driver",
+  "about.fact.os.value": "Linux",
 
   "projects.title": "Projects",
   "projects.subtitle": "Pinned repositories, straight from my GitHub profile.",
@@ -64,6 +67,10 @@
   "event.ReleaseEvent": "Published a release in {repo}",
   "event.default": "Did something in {repo}",
 
-  "footer.text": "Built with plain HTML, CSS & JS in the style of Material 3 Expressive.",
-  "footer.sourceLink": "View source"
+  "contact.title": "Contact",
+  "contact.subtitle": "The best ways to reach me.",
+  "contact.telegram.label": "Telegram",
+  "contact.discord.label": "Discord",
+  "contact.discord.copied": "Copied!",
+  "contact.github.label": "GitHub"
 }

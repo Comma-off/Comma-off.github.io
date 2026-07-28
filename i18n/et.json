@@ -6,6 +6,7 @@
   "nav.about": "Minust",
   "nav.projects": "Projektid",
   "nav.activity": "GitHubi tegevus",
+  "nav.contact": "Kontakt",
   "theme.toggle": "Vaheta hele/tume teema",
   "lang.label": "Keel",
 
@@ -24,6 +25,8 @@
   "about.fact.name.value": "Peidetud — kutsu mind Commaks",
   "about.fact.handle.label": "GitHub",
   "about.fact.handle.value": "@Comma-off",
+  "about.fact.os.label": "Peamine OS",
+  "about.fact.os.value": "Linux",
 
   "projects.title": "Projektid",
   "projects.subtitle": "Kinnitatud repositooriumid otse minu GitHubi profiililt.",
@@ -64,6 +67,10 @@
   "event.ReleaseEvent": "Avaldas väljalaske repositooriumis {repo}",
   "event.default": "Tegi midagi repositooriumis {repo}",
 
-  "footer.text": "Ehitatud puhta HTML, CSS ja JS-ga Material 3 Expressive stiilis.",
-  "footer.sourceLink": "Vaata lähtekoodi"
+  "contact.title": "Kontakt",
+  "contact.subtitle": "Parimad viisid minuga ühenduse võtmiseks.",
+  "contact.telegram.label": "Telegram",
+  "contact.discord.label": "Discord",
+  "contact.discord.copied": "Kopeeritud!",
+  "contact.github.label": "GitHub"
 }
