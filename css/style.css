@@ -503,13 +503,13 @@ a {
 .fact-card--c {
   background: var(--md-tertiary-container);
   color: var(--md-on-tertiary-container);
-  border-radius: var(--shape-xl);
+  border-radius: var(--shape-xl) var(--shape-xs) var(--shape-xl) var(--shape-xs);
 }
 .fact-card--d {
   background: var(--md-surface-container-high);
   color: var(--md-on-surface);
   border: 1px solid var(--md-outline-variant);
-  border-radius: var(--shape-xs) var(--shape-xl) var(--shape-xl) var(--shape-xs);
+  border-radius: var(--shape-xs) var(--shape-xl) var(--shape-xs) var(--shape-xl);
 }
 
 /* ---------------------------------- Projects ---------------------------------- */
