@@ -387,6 +387,13 @@
         }
       }
 
+      // Near the bottom of the page there may not be enough scroll room left for the
+      // last section's top to ever cross the offset line, so force it active there.
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      if (atBottom) {
+        current = tracked[tracked.length - 1];
+      }
+
       navLinks.forEach((l) => l.classList.remove("active"));
       if (current) current.link.classList.add("active");
     }
